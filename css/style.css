@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+html {
+    /*cursor: url(/assets/cursor.png), auto;*/
+    overflow: hidden;
+}
+
+body {
+    background: url(/Assets/school.jpg);
+    backdrop-filter: blur(12px);
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em 4em;
+}
+
+/*.Title {
+    color: #fff;
+    font-size: 2em;
+    font-weight: 800;
+}*/
+
+.Title img {
+    height: 5em;
+    width: auto;
+    cursor: pointer;
+}
+
+.navbar {
+    width: 70%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 0 0 0 1.5em;
+    margin: 0 0 0 1.5em;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar ul {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    list-style: none;
+}
+
+.navbar ul li {
+    padding: 0.1em;
+    margin: 0 2em;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar ul li a {
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    color: #000;
+    transition: all 0.3s ease-in-out;
+}
+
+.content {
+    padding-top: 7em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out
+}
+
+.content h1 {
+    color: #fff;
+    font-weight: 800;
+    font-size: 4em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: all 0.3s ease-in-out
+}
+
+.content h3 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    transition: all 0.3s ease-in-out
+}
+
+.content p {
+    color: #fff;
+    font-weight: 200;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    transition: all 0.3s ease-in-out
+}
+
+@media (max-width: 800px) {
+    header {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1em 2em;
+    }
+
+    .navbar {
+        width: 70%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        padding: 0;
+        margin: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .navbar ul {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        list-style: none;
+    }
+
+    .navbar ul li {
+        padding: 0.5em;
+        margin: 0.5em;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 1em 2em;
+    }
+
+    .navbar {
+        width: 70%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2em;
+        padding: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .navbar ul {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+    }
+
+    .navbar ul li {
+        padding: 0.5em;
+        margin: 0.5em;
+    }
+}
+
+
+@media (max-width: 550px) {
+    .content {
+        padding-top: 7em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .content h1 {
+        color: #fff;
+        font-weight: 800;
+        font-size: 2.5em;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .content h3 {
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.1em;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+
+    .content p {
+        color: #fff;
+        font-weight: 500;
+        font-size: 1em;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+}
+
+
+.countdown {
+    display: flex;
+    padding-top: 3em;
+    width: 100%;
+    height: 100px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.countdown .timer {
+    height: 100%;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.countdown .timer .numb {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.countdown .timer .text {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.countdown .clone {
+    font-size: 55px;
+}
+
+/*@media (max-width: 630px) {
+
+    .container img {
+        height: 6em;
+        margin: 40px;
+    }
+
+    .container h1 {
+        font-size: 3rem;
+        line-height: 3.2rem;
+    }
+
+    .container h3 {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+
+    .countdown {
+        height: 80px;
+    }
+
+    .countdown .timer {
+        width: 80px;
+    }
+
+    .countdown .timer .numb {
+        font-size: 32px;
+    }
+
+    .countdown .timer .text {
+        font-size: 15px;
+    }
+
+    .countdown .clone {
+        font-size: 40px;
+    }
+}*/
+
+@media (max-width: 550px) {
+    .countdown .timer {
+        border: none;
+    }
+
+    .countdown .timer .numb {
+        font-size: 28px;
+    }
+
+    .countdown .timer .text {
+        font-size: 15px;
+    }
+
+    .countdown .clone {
+        display: none;
+    }
+}
+
+@media (max-width: 340px) {
+    .container h1 {
+        font-size: 2rem;
+        line-height: 3.2rem;
+    }
+
+    .container h3 {
+        font-size: 1.7rem;
+        line-height: 1.7rem;
+    }
+
+    .countdown {
+        height: 30px;
+    }
+
+    .countdown .timer {
+        width: 30px;
+    }
+}
