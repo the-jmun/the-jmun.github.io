@@ -1,0 +1,18 @@
+.carousel-inner {
+    max-height: auto;
+    max-width: 70em;
+    border-radius: 10px;
+    margin: 1em;
+}
+
+
+.carousel-caption {
+    background: #fff;
+    border: 10px;
+    opacity: 80%;
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+    color: #000;
+}
