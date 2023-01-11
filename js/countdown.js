@@ -4,7 +4,7 @@ const day = document.querySelector(".day .numb");
             const sec = document.querySelector(".sec .numb");
             var timer = setInterval(() => {
                 var currentDate = new Date().getTime();
-                var launchDate = new Date('Jan 1, 2023 00:00:00').getTime();
+                var launchDate = new Date('Jun 1, 2023 00:00:00').getTime();
                 var duration = launchDate - currentDate;
                 var days = Math.floor(duration / (1000 * 60 * 60 * 24));
                 var hours = Math.floor((duration % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
