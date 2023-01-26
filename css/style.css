@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
-
+/*@import url(/Generica.otf);*/
 
 * {
     margin: 0;
@@ -10,96 +10,105 @@
 
 
 body {
-    background: url(/Assets/school.jpg);
-    backdrop-filter: blur(12px);
-    background-repeat: no-repeat;
-    background-size: auto;
     min-height: 100vh;
     width: 100vw;
-    overflow: hidden;
-}
-
-.main-container {
-    scroll-snap-type: y mandatory;
-    overflow-y: auto;
+    background-color: #000;
     overflow-x: hidden;
-    height: 100vh;
-    scroll-padding: 50px;
 }
 
-section {
-    min-height: 100vh;
-    display: flex;
-    justify-content: top;
-    align-items: center;
-    flex-direction: column;
-}
+/**/
+/**/
+/**/
 
-header {
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2em 4em;
-}
-
-/*.Title {
-    color: #fff;
-    font-size: 2em;
-    font-weight: 800;
-}*/
-
-.Title img {
-    height: 5em;
-    width: auto;
-    cursor: pointer;
-}
-
-.navbar {
-    width: 70%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    padding: 0 0 0 1.5em;
-    margin: 0 0 0 1.5em;
-    transition: all 0.3s ease-in-out;
-}
-
-.navbar ul {
+nav {
+    position: fixed;
     width: 100%;
-    height: auto;
+    padding: 2em;
+    z-index: 111;
+}
+
+nav ul {
+    width: 100%;
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: right;
-    list-style: none;
 }
 
-.navbar ul li {
-    padding: 0.1em;
-    margin: 0 2em;
-    transition: all 0.3s ease-in-out;
+nav ul li {
+    display: inline-block;
+    margin: 0 0.7em;
 }
 
-.navbar ul li a {
+nav ul li a {
     color: #fff;
-    font-size: 1.5em;
+    font-size: 1.2em;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
 }
 
-.navbar ul li a:hover {
-    color: #000;
+nav ul li a:hover {
     transition: all 0.3s ease-in-out;
+    text-decoration: underline;
+}
+
+/**/
+/**/
+/**/
+
+#header {
+    position: relative;
+    height: 145vh;
+    width: 100vw;
+    background: url(/Assets/hquarters.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#header #heroBG {
+    height: 145vh;
+    background: #000;
+    opacity: 0;
+    z-index: 1213;
+}
+
+.reveal {
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.reveal.active {
+    opacity: 1;
+}
+
+.header-container {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: top;
+    flex-direction: column;
+    padding: 2em;
+    padding-top: 7em;
+}
+
+.Title img {
+    position: relative;
+    height: 45em;
+    width: auto;
+    cursor: pointer;
 }
 
 .header-content {
-    padding-top: 7em;
+    margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    transition: all 0.3s ease-in-out
+    text-align: center;
 }
 
 .header-content h1 {
@@ -108,7 +117,7 @@ header {
     font-size: 4em;
     text-transform: uppercase;
     letter-spacing: 3px;
-    transition: all 0.3s ease-in-out
+    opacity: 0;
 }
 
 .header-content h3 {
@@ -117,7 +126,7 @@ header {
     font-size: 1.5em;
     text-transform: uppercase;
     letter-spacing: 5px;
-    transition: all 0.3s ease-in-out
+    opacity: 0;
 }
 
 .header-content p {
@@ -126,7 +135,7 @@ header {
     font-size: 1em;
     text-transform: uppercase;
     letter-spacing: 5px;
-    transition: all 0.3s ease-in-out
+    opacity: 0;
 }
 
 .countdown {
@@ -138,6 +147,7 @@ header {
     align-items: center;
     justify-content: center;
     color: #fff;
+    opacity: 0;
 }
 
 .countdown .timer {
@@ -164,171 +174,80 @@ header {
     font-size: 55px;
 }
 
-.box {
-    background: #fff;
-    padding: 1.2em;
-    margin: 1em;
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
 
-}
-
-.Sec-Letter-Container h2 {
-    font-weight: 600;
-    font-size: 2em;
-    color: rgb(18, 18, 18);
-}
-
-.Sec-Letter-Container p {
-    font-weight: 400;
-    font-size: 1.3em;
-    color: rgb(18, 18, 18);
-}
-
-h2 {
-    font-weight: 600;
-    font-size: 2em;
-    color: #000;
-}
-
-p {
-    font-weight: 400;
-    font-size: 1.3em;
-    color: #000;
-}
-
-
-/* ----------------------------------------------------Footer Styling--------------------------------------------------------- */
-footer {
-    height: fit-content;
+.page-content {
+    padding: 3em;
     background: #000;
-    padding: 1.2em;
-    margin: 1em;
+    min-height: 100vh;
     width: 100%;
-}
-
-.ftinfo {
     display: flex;
-    color: white;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    flex-direction: column;
 }
 
-.col {
-    background-color: black;
-    min-height: 8rem;
-    width: 20rem;
+.Letter-Container {
+    margin: 12em 7em;
+    padding: 3em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
 }
 
-.footer-heading {
-    padding: 5px 0;
-    border-bottom: 1px solid white;
+.Letter-Container h2 {
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 1em;
 }
 
-.credits {
-    color: white;
-    border-top: 1px solid grey;
-    padding: 5px 50px;
-    margin-top: 3rem;
-}
-
-.space {
-    height: 10vh;
-    background: transparent;
-}
-
-.col img {
-    width: 80px;
-    padding: 0px;
-    margin: 0px;
-}
-
-.ftinfo a {
-    color: white;
-    text-decoration: none;
-}
-
-.ftinfo a:hover {
-    text-decoration: underline;
-    transition: 0.5s ease-out;
-}
-
-.ftinfo p {
-    line-height: 1.4;
-}
-
-.credits {
-    text-align: center;
+.Letter-Container p {
+    color: #fff;
+    font-size: 1.3em;
+    margin-bottom: 1em;
 }
 
 
 @media (max-width: 1200px) {
-    header {
+    #header {
+        position: relative;
+        height: 135vh;
         width: 100vw;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1em 2em;
+        background: url(/Assets/hquarters.jpg);
+        background-size: 100%;
+        background-position: center;
+        background-attachment: fixed;
     }
 
-    .navbar {
-        width: 70%;
-        height: auto;
-        display: flex;
-        align-items: center;
-        justify-content: right;
-        padding: 0;
-        margin: 0;
-        transition: all 0.3s ease-in-out;
-    }
-
-    .navbar ul {
-        width: 100%;
-        height: auto;
-        display: flex;
-        align-items: center;
-        justify-content: right;
-        list-style: none;
-    }
-
-    .navbar ul li {
-        padding: 0.5em;
-        margin: 0.5em;
+    .Title img {
+        height: 40em;
     }
 }
 
+
 @media (max-width: 768px) {
-    header {
-        width: 100vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        padding: 1em 2em;
+
+    nav {
+        position: fixed;
     }
 
-    .navbar {
-        width: 70%;
-        height: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 2em;
-        padding: 0;
-        transition: all 0.3s ease-in-out;
+    nav ul li {
+        margin: 0 0.5em;
     }
 
-    .navbar ul {
-        width: 100%;
-        height: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        list-style: none;
+    nav ul li a {
+        font-size: 1.1em;
     }
 
-    .navbar ul li {
-        padding: 0.5em;
-        margin: 0.5em;
+    .Title img {
+        height: 35em;
     }
 
     .header-content {
@@ -336,13 +255,18 @@ footer {
     }
 }
 
-
 @media (max-width: 600px) {
-    .navbar {
-        visibility: hidden;
-        margin-top: 0;
-        height: 0;
+    nav {
+        position: fixed;
+        width: 100%;
+        padding: 2em;
+        z-index: 111;
     }
+
+    .Title img {
+        height: 30em;
+    }
+
 
     .header-content {
         padding-top: 1.5em;
@@ -375,15 +299,43 @@ footer {
         text-transform: uppercase;
         letter-spacing: 4px;
     }
+
+    .page-content {
+        padding: 2em;
+    }
+    
+    .Letter-Container {
+        margin: 8em 5em;
+        padding: 3em;
+    }
+    
+    .Letter-Container h2 {
+        margin-bottom: 1em;
+    }
+    
+    .Letter-Container p {
+        margin-bottom: 1em;
+    }
 }
 
-
 @media (max-width: 480px) {
+
+    .Title img {
+        height: 18em;
+    }
+
+    nav ul li {
+        margin: 0.3em;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    }
 
     .header-content h1 {
         color: #fff;
         font-weight: 800;
-        font-size: 2.5em;
+        font-size: 2em;
         text-transform: uppercase;
         letter-spacing: 3px;
     }
@@ -404,27 +356,29 @@ footer {
         letter-spacing: 4px;
     }
 
-    .box {
-        background: #fff;
-        padding: 1em;
-        margin: 0.8em;
-
-    }
-
-    .Sec-Letter-Container h2 {
+    .Letter-Container h2 {
         font-weight: 500;
         font-size: 1.3em;
-        color: rgb(18, 18, 18);
+        color: rgb(255, 255, 255);
     }
 
-    .Sec-Letter-Container p {
+    .Letter-Container p {
         font-weight: 400;
         font-size: 1em;
-        color: rgb(18, 18, 18);
+        color: rgb(255, 255, 255);
     }
+    .page-content {
+        padding: 2em;
+    }
+    
+    .Letter-Container {
+        margin: 6em 3em;
+        padding: 2em;
+    }
+    
 }
 
-/*@media (max-width: 630px) {
+@media (max-width: 630px) {
 
     .container img {
         height: 6em;
@@ -460,7 +414,7 @@ footer {
     .countdown .clone {
         font-size: 40px;
     }
-}*/
+}
 
 @media (max-width: 600px) {
     .countdown .timer {
@@ -498,4 +452,5 @@ footer {
     .countdown .timer {
         width: 65px;
     }
+    
 }
